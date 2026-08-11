@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WispDaily — Case Study | Legacy &amp; Key</title>
+<meta name="description" content="How WispDaily, a daily AI-generated kids' news podcast, was built with safety and editorial safeguards at its core.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.85em' font-size='90'%3E%F0%9F%94%91%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark">🔑</span>
+      <span class="brand-name">Legacy &amp; Key</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#services">Services</a>
+      <a href="../profile.html">Profile</a>
+      <a href="../index.html#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <a href="../index.html#work" class="back-link">← Back to work</a>
+      <p class="eyebrow">Product Build</p>
+      <h1>WispDaily: a daily news podcast built for kids — and built to be safe</h1>
+      <p class="lede">A fully automated daily children's podcast, designed, built and shipped to the App Store solo — turning the day's news and topics into something kids can actually listen to, with strict content and workflow guardrails built in from day one.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cs-meta">
+        <div class="cs-meta-item">
+          <span class="label">Role</span>
+          <span class="value">Founder &amp; sole builder</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="label">Type</span>
+          <span class="value">Consumer AI product<span class="status-pill">Live</span></span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="label">Stack</span>
+          <span class="value">Claude Code, OpenAI, ElevenLabs</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="label">Audience</span>
+          <span class="value">Children &amp; families — live on the App Store</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="label">Timeline</span>
+          <span class="value">May–Jun 2026, solo build</span>
+        </div>
+      </div>
+
+      <div class="cs-body">
+        <h2>The idea</h2>
+        <p>Kids' news content is either dumbed down, thin on substance, or simply doesn't exist in a format kids will sit through — while most "news" designed for kids is written once and read by a human on a fixed schedule, which doesn't scale to a daily habit. WispDaily set out to solve that: a genuinely daily, genuinely kid-appropriate news and topics podcast, generated and narrated with AI, so a fresh episode is ready every single day without a production team behind it.</p>
+
+        <h2>The build</h2>
+        <p>WispDaily is an end-to-end pipeline built solo, from architecture to App Store release: sourcing and selecting age-appropriate news and topics, rewriting them into scripts a child can follow and enjoy using OpenAI, turning those scripts into a listenable episode with ElevenLabs' high-quality voices, and orchestrating the whole daily build with Claude Code. Every part of that pipeline — selection, writing, narration, and publishing — had to be designed to run reliably without a human in the loop for each individual episode.</p>
+
+        <h2>Safety &amp; editorial safeguards</h2>
+        <p>A product speaking directly into children's ears carries a different bar than a general-purpose AI app. The build treated safeguards as core product requirements, not an afterthought:</p>
+        <ul>
+          <li><strong>Source and topic filtering</strong> — screening what stories and subjects are eligible for a children's audience before anything is generated.</li>
+          <li><strong>Age-appropriate rewriting</strong> — content is reframed in tone and language for a young audience, not simply summarised adult news.</li>
+          <li><strong>Review checkpoints</strong> — generated scripts pass through review steps designed to catch unsafe, upsetting, or inappropriate content before narration and publishing.</li>
+          <li><strong>Narration quality control</strong> — the audio experience is held to a consistent, high-quality bar so it's genuinely pleasant for a child to listen to daily.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Why this case study matters:</strong> WispDaily is the clearest proof of end-to-end AI build capability on this site — sourcing, generation, voice, safety, and daily automated delivery, designed, built and shipped solo to the App Store, not a prototype.
+        </div>
+
+        <div class="placeholder-note">
+          Placeholder for Ben: confirm which specific safeguard mechanisms you're comfortable detailing publicly, and add real usage metrics (episodes shipped, listens, retention, App Store rating) once you have them.
+        </div>
+      </div>
+
+      <div class="cs-cta">
+        <a href="https://wispdaily.com" class="btn btn-primary" target="_blank" rel="noopener">Visit WispDaily →</a>
+        <a href="../index.html#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; <span id="year"></span> Legacy &amp; Key. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="mailto:hello@legacyandkey.com">hello@legacyandkey.com</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
