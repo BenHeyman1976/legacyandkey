@@ -49,4 +49,40 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.setProperty("--my", `${e.clientY - rect.top}px`);
     });
   });
+
+  // Slower, eased in-page scrolling (native smooth-scroll feels abrupt)
+  const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+  function smoothScrollTo(targetY, duration = 800) {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const startTime = performance.now();
+
+    function step(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const header = document.querySelector(".site-header");
+  const headerOffset = (header ? header.offsetHeight : 76) + 12;
+
+  document.querySelectorAll('a[href*="#"]').forEach((link) => {
+    const probe = document.createElement("a");
+    probe.href = link.getAttribute("href");
+    if (probe.pathname !== window.location.pathname || !probe.hash) return;
+
+    const target = document.querySelector(probe.hash);
+    if (!target) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetY = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+      smoothScrollTo(Math.max(targetY, 0));
+      history.pushState(null, "", probe.hash);
+    });
+  });
 });
