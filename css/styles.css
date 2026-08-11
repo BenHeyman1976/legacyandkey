@@ -594,7 +594,15 @@ a:hover { text-decoration: underline; }
   color: var(--text);
   background: var(--surface);
   isolation: isolate;
+  overflow: hidden;
 }
+.avatar-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.avatar-badge.avatar-large { width: 148px; height: 148px; }
 .avatar-badge::before {
   content: "";
   position: absolute;
