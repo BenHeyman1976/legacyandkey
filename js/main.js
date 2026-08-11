@@ -41,19 +41,15 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
-  // Card cursor-spotlight
-  document.querySelectorAll(".card, .work-card").forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-      card.style.setProperty("--my", `${e.clientY - rect.top}px`);
-    });
-  });
-
   // Slower, eased in-page scrolling (native smooth-scroll feels abrupt)
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const easeInOutCubic = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
-  function smoothScrollTo(targetY, duration = 800) {
+  function smoothScrollTo(targetY, duration = 700) {
+    if (prefersReducedMotion) {
+      window.scrollTo(0, targetY);
+      return;
+    }
     const startY = window.scrollY;
     const distance = targetY - startY;
     const startTime = performance.now();

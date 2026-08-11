@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WispDaily — Case Study</title>
-<meta name="description" content="How WispDaily, a daily AI-generated kids' news podcast, was built with safety and editorial safeguards at its core.">
+<title>Building and Shipping an Automated AI Audio Product — Ben Heyman</title>
+<meta name="description" content="WispDaily: a fully automated children's news podcast, designed, built and shipped solo — orchestrating multiple AI services with content safety built into the workflow.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building and Shipping an Automated AI Audio Product">
+<meta property="og:description" content="WispDaily: a fully automated children's news podcast, designed, built and shipped solo by Ben Heyman.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b0d12'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='42' font-weight='700' fill='%23c9a24b' text-anchor='middle'%3EBH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +23,10 @@
       <span class="brand-name">Ben Heyman</span>
     </a>
     <nav class="nav" id="nav">
-      <a href="../index.html#work">Case Studies</a>
-      <a href="../index.html#services">Services</a>
-      <a href="../profile.html">Profile</a>
-      <a href="../index.html#contact" class="nav-cta">Get in touch</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../profile.html">About</a>
+      <a href="../index.html#contact" class="nav-cta">Contact</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -34,62 +37,55 @@
 <main>
   <section class="page-hero">
     <div class="container hero-anim-in">
-      <a href="../index.html#work" class="back-link">← Back to case studies</a>
-      <p class="eyebrow">Product Build</p>
-      <h1>WispDaily: a daily news podcast for kids</h1>
-      <p class="lede">A fully automated children's news podcast, designed and built solo and shipped to the App Store, with content and editorial safeguards in place from the start.</p>
+      <a href="../index.html#work" class="back-link">← Back to selected work</a>
+      <p class="eyebrow">Hands-on AI Product Build</p>
+      <h1>Building and shipping an automated AI audio product</h1>
+      <p class="lede">WispDaily is a fully automated children's news and topics podcast: AI generates and edits the scripts, narrates them, and a new episode publishes every day. I designed, built and shipped it solo — from architecture to App Store release — with content safety and editorial controls built into the workflow from the start.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container hero-anim-in">
+      <p class="eyebrow" style="margin-bottom:16px;">At a glance</p>
       <div class="cs-meta">
         <div class="cs-meta-item">
           <span class="label">Role</span>
           <span class="value">Founder &amp; sole builder</span>
         </div>
         <div class="cs-meta-item">
-          <span class="label">Type</span>
-          <span class="value">Consumer AI product<span class="status-pill">Live</span></span>
+          <span class="label">Organisation</span>
+          <span class="value">Independent<span class="status-pill">Live</span></span>
         </div>
         <div class="cs-meta-item">
-          <span class="label">Stack</span>
-          <span class="value">Claude Code, OpenAI, ElevenLabs</span>
-        </div>
-        <div class="cs-meta-item">
-          <span class="label">Audience</span>
+          <span class="label">Users</span>
           <span class="value">Children &amp; families — live on the App Store</span>
         </div>
         <div class="cs-meta-item">
-          <span class="label">Timeline</span>
-          <span class="value">May–Jun 2026, solo build</span>
+          <span class="label">Technology</span>
+          <span class="value">OpenAI, ElevenLabs, Claude Code</span>
         </div>
       </div>
 
       <div class="cs-body reveal">
-        <h2>The idea</h2>
-        <p>Most kids' news content is either dumbed down, thin on substance, or written once and read by a human on a fixed schedule — which doesn't scale to a daily habit. WispDaily is a genuinely daily, age-appropriate news and topics podcast, generated and narrated with AI, so a new episode is ready every day without a production team behind it.</p>
+        <h2>Problem</h2>
+        <p>Most kids' news content is either dumbed down, thin on substance, or written once and read by a human on a fixed schedule — which doesn't scale to a daily habit. There was no genuinely daily, age-appropriate news and topics podcast that a small team, let alone one person, could sustain.</p>
 
-        <h2>The build</h2>
-        <p>WispDaily is an end-to-end pipeline built solo, from architecture to App Store release: sourcing and selecting age-appropriate news and topics, rewriting them into scripts a child can follow and enjoy using OpenAI, turning those scripts into a listenable episode with ElevenLabs' high-quality voices, and orchestrating the whole daily build with Claude Code. Every part of that pipeline — selection, writing, narration, and publishing — had to be designed to run reliably without a human in the loop for each individual episode.</p>
+        <h2>Why it was difficult</h2>
+        <p>Publishing content daily with no human editor reviewing each episode raises the bar considerably for a product aimed at children. Every stage of the pipeline — sourcing, writing, narration and publishing — had to run reliably and safely without manual review of each individual episode, while still meeting a high bar for tone, accuracy and age-appropriateness.</p>
 
-        <h2>Safety &amp; editorial safeguards</h2>
-        <p>A product speaking directly into children's ears carries a different bar than a general-purpose AI app. The build treated safeguards as core product requirements, not an afterthought:</p>
-        <ul>
-          <li><strong>Source and topic filtering</strong> — screening what stories and subjects are eligible for a children's audience before anything is generated.</li>
-          <li><strong>Age-appropriate rewriting</strong> — content is reframed in tone and language for a young audience, not simply summarised adult news.</li>
-          <li><strong>Review checkpoints</strong> — generated scripts pass through review steps designed to catch unsafe, upsetting, or inappropriate content before narration and publishing.</li>
-          <li><strong>Narration quality control</strong> — the audio experience is held to a consistent, high-quality bar so it's genuinely pleasant for a child to listen to daily.</li>
-        </ul>
+        <h2>Approach</h2>
+        <p>I built WispDaily as an end-to-end pipeline: sourcing and selecting age-appropriate news and topics, rewriting them into scripts a child can follow using OpenAI, turning those scripts into narrated audio with ElevenLabs' voices, and orchestrating the daily build with Claude Code. Content safety was treated as a core product requirement rather than an afterthought, with source and topic filtering, age-appropriate rewriting, and review checkpoints designed to catch unsafe or inappropriate content before narration and publishing.</p>
 
-        <div class="placeholder-note">
-          Placeholder for Ben: confirm which specific safeguard mechanisms you're comfortable detailing publicly, and add real usage metrics (episodes shipped, listens, retention, App Store rating) once you have them.
-        </div>
+        <h2>Outcome</h2>
+        <p>WispDaily is live on the App Store. This write-up will be updated with usage data as it becomes available.</p>
+
+        <h2>What this demonstrates</h2>
+        <p>This is the clearest proof on this site that I don't just advise on AI — I understand implementation well enough to design and ship a working product: identifying a real user problem, orchestrating multiple AI services into a single pipeline, designing an editorial workflow and content-safety controls, automating daily production, and shipping to the App Store, solo.</p>
       </div>
 
       <div class="cs-cta">
         <a href="https://wispdaily.com" class="btn btn-primary" target="_blank" rel="noopener">Visit WispDaily →</a>
-        <a href="../index.html#contact" class="btn btn-ghost">Get in touch</a>
+        <a href="../index.html#work" class="btn btn-ghost">More case studies</a>
       </div>
     </div>
   </section>

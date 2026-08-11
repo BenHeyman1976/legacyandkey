@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Credit Risk Sentiment Model — Case Study</title>
-<meta name="description" content="A news-sentiment model built to give Credit Analysts a new, comparable risk signal across companies, sectors and regions.">
+<title>Turning News Flow into a Usable Credit-Risk Signal — Ben Heyman</title>
+<meta name="description" content="At Standard Chartered, Ben Heyman developed a news-sentiment MVP giving Credit Analysts a comparable risk signal across companies, sectors and regions.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Turning News Flow into a Usable Credit-Risk Signal">
+<meta property="og:description" content="A news-sentiment MVP built at Standard Chartered to give Credit Analysts a comparable, validated risk signal — not another dashboard.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b0d12'/%3E%3Ctext x='50' y='58' font-family='Arial,sans-serif' font-size='42' font-weight='700' fill='%23c9a24b' text-anchor='middle'%3EBH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +23,10 @@
       <span class="brand-name">Ben Heyman</span>
     </a>
     <nav class="nav" id="nav">
-      <a href="../index.html#work">Case Studies</a>
-      <a href="../index.html#services">Services</a>
-      <a href="../profile.html">Profile</a>
-      <a href="../index.html#contact" class="nav-cta">Get in touch</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../profile.html">About</a>
+      <a href="../index.html#contact" class="nav-cta">Contact</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -34,50 +37,68 @@
 <main>
   <section class="page-hero">
     <div class="container hero-anim-in">
-      <a href="../index.html#work" class="back-link">← Back to case studies</a>
-      <p class="eyebrow">Applied ML</p>
-      <h1>A news-sentiment model that gave Credit Analysts a new risk signal</h1>
-      <p class="lede">Built at Standard Chartered Bank: a news-sentiment MVP that let Credit Analysts compare risk signal across companies, sectors and regions — turning unstructured news flow into something a risk desk could actually use.</p>
+      <a href="../index.html#work" class="back-link">← Back to selected work</a>
+      <p class="eyebrow">Applied AI / Financial Services</p>
+      <h1>Turning news flow into a usable credit-risk signal</h1>
+      <p class="lede">At Standard Chartered, I developed a news-sentiment MVP that gave Credit Analysts a new way to compare emerging risk signal across companies, sectors and regions — turning unstructured news flow into a consistent input to the credit-analysis workflow, validated directly with the analysts who would use it.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container hero-anim-in">
+      <p class="eyebrow" style="margin-bottom:16px;">At a glance</p>
       <div class="cs-meta">
         <div class="cs-meta-item">
-          <span class="label">Context</span>
-          <span class="value">Standard Chartered Bank — Chief Product Owner, Sales &amp; Trading Data and Credit Analytics</span>
+          <span class="label">Role</span>
+          <span class="value">Chief Product Owner, Sales &amp; Trading Data and Credit Analytics</span>
         </div>
         <div class="cs-meta-item">
-          <span class="label">Type</span>
-          <span class="value">Applied NLP / sentiment analysis<span class="status-pill">Public rebuild in progress</span></span>
+          <span class="label">Organisation</span>
+          <span class="value">Standard Chartered Bank</span>
         </div>
         <div class="cs-meta-item">
           <span class="label">Users</span>
           <span class="value">Credit Analysts, global</span>
         </div>
         <div class="cs-meta-item">
-          <span class="label">Timeline</span>
-          <span class="value">May 2022–Jan 2025</span>
+          <span class="label">Technology</span>
+          <span class="value">Applied NLP / sentiment analysis<span class="status-pill">MVP, validated with users</span></span>
         </div>
       </div>
 
       <div class="cs-body reveal">
-        <h2>The problem</h2>
-        <p>Credit Analysts assess risk across companies, sectors and regions largely from structured financial data — but a meaningful part of the real-time risk picture lives in unstructured news flow, and reading it consistently across hundreds of names and dozens of sectors doesn't scale to a small team. There was no systematic way to turn that news signal into something comparable, at scale, across the portfolio.</p>
+        <h2>Problem</h2>
+        <p>Credit Analysts assess risk across companies, sectors and regions largely from structured financial data — but a meaningful part of the real-time risk picture lives in unstructured news flow. Reading it consistently across hundreds of names and dozens of sectors doesn't scale to a small team, and there was no systematic way to turn that news signal into something comparable, at scale, across the portfolio.</p>
 
-        <h2>The approach</h2>
-        <p>I built a news-sentiment model designed specifically for that comparison problem: not just "is the sentiment positive or negative" but a signal Credit Analysts could use to compare risk across a company, its sector, and its region on a consistent basis. It shipped as an MVP and was tested directly with Credit Analysts to validate whether the signal was actually useful in their existing workflow, rather than adding a dashboard nobody opens.</p>
-        <p>This sat inside a broader product remit: owning strategy and delivery for around 700 global Sales, Trading, COO and Credit users, and leading a 12–15 person Data Science team through a formal intake and investment process focused on use cases with demonstrable business value, technical feasibility and strategic relevance.</p>
+        <h2>Why it was difficult</h2>
+        <p>A sentiment score is only useful to a credit analyst if it's comparable — across a single company over time, against its sector peers, and against its region — and reliable enough to sit inside a regulated credit-decision process. Any model influencing that judgement had to meet a governance bar a typical internal analytics tool doesn't, and had to prove its value inside an analyst's actual workflow rather than as a standalone dashboard nobody opens.</p>
+
+        <h2>Approach</h2>
+        <p>I built a news-sentiment model designed specifically for the comparison problem: not just whether sentiment was positive or negative, but a signal Credit Analysts could use to compare risk across a company, its sector and its region on a consistent basis. This sat inside a broader product remit — owning strategy and delivery for around 700 global Sales, Trading, COO and Credit users, and leading a 12–15 person Data Science team through a formal intake and investment process focused on use cases with demonstrable business value, technical feasibility and strategic relevance.</p>
+
+        <h2>Solution</h2>
+        <p>The model shipped as an MVP and was tested directly with Credit Analysts — validating that the signal changed how they assessed risk, not simply that the model existed. It was designed to slot into the analyst's existing review process rather than introduce a separate tool to check.</p>
 
         <h2>Responsible AI &amp; governance</h2>
         <div class="callout">
-          <p style="margin-bottom:0;">Any model influencing credit risk judgement in a regulated bank needs governance that a consumer app doesn't. I co-chaired the monthly Responsible AI Committee, working with Risk, Platform and Technology stakeholders to approve, reject or set conditions on AI initiatives — including this one — and contributing to the governance standards models like this were expected to meet.</p>
+          <p style="margin-bottom:0;">Any model influencing credit risk judgement in a regulated bank needs governance a consumer app doesn't. I co-chaired the monthly Responsible AI Committee, working with Risk, Platform and Technology stakeholders to approve, reject or set conditions on AI initiatives — including this one — and contributing to the governance standards models like this were expected to meet.</p>
         </div>
 
-        <div class="placeholder-note">
-          A public, rebuilt demo version of this model — using open data in place of proprietary bank data — is in progress and will be linked here once live.
+        <h2>Outcome</h2>
+        <p>A validated MVP, adopted into analyst workflow rather than left as a proof of concept — delivered alongside the broader Sales &amp; Trading data product remit, and governed through the bank's Responsible AI process.</p>
+
+        <div class="demo-cta">
+          <div class="demo-cta-text">
+            <span class="label">Public demo</span>
+            <p>A rebuilt version of this model, using open data in place of any proprietary Standard Chartered data or models, is in progress.</p>
+          </div>
+          <!-- Once a demo URL exists, replace the span below with:
+               <a href="DEMO_URL" class="btn btn-primary" target="_blank" rel="noopener">View live demo →</a> -->
+          <span class="btn btn-disabled">View live demo — in progress</span>
         </div>
+
+        <h2>What this demonstrates</h2>
+        <p>This case study is the clearest evidence of the combination this site is built on: solving a real business problem rather than chasing model novelty, hands-on delivery, and the product ownership and governance discipline needed to get an AI signal adopted inside a regulated, risk-sensitive workflow.</p>
       </div>
 
       <div class="cs-cta">
