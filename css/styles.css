@@ -366,6 +366,8 @@ textarea:focus-visible {
   transition: border-color .2s ease;
 }
 .card:hover { border-color: var(--accent); }
+a.card { display: block; text-decoration: none; }
+a.card:hover { text-decoration: none; }
 .card-icon {
   font-family: var(--font-display);
   color: var(--accent);
@@ -376,6 +378,82 @@ textarea:focus-visible {
 }
 .card h3 { margin-bottom: 10px; }
 .card p { margin-bottom: 0; font-size: 0.95rem; }
+.card .card-foot { margin-top: 14px; font-size: 0.83rem; font-weight: 600; color: var(--accent-soft); }
+
+/* ---------- playbook flow (understated methodology chain) ---------- */
+.playbook {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 4px;
+  margin: 28px 0;
+}
+.playbook-step {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border: 1px solid var(--surface-border);
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+a.playbook-step {
+  text-decoration: none;
+  transition: border-color .15s ease, color .15s ease;
+}
+a.playbook-step:hover { border-color: var(--accent); color: var(--accent-soft); text-decoration: none; }
+.playbook-arrow { color: var(--text-faint); font-size: 0.85rem; }
+
+/* ---------- prioritisation matrix ---------- */
+.priority-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+.priority-card {
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  background: var(--surface);
+}
+.priority-card .label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.priority-card p { margin-bottom: 0; font-size: 0.88rem; }
+
+/* ---------- led vs engineering distinction ---------- */
+.delivery-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 18px 0 28px;
+}
+.delivery-split-item {
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+.delivery-split-item .label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  color: var(--text-faint);
+  margin-bottom: 6px;
+}
+.delivery-split-item.led .label { color: var(--accent); }
+.delivery-split-item p { margin-bottom: 0; font-size: 0.88rem; }
 
 /* ---------- selected work ---------- */
 .work-list {
